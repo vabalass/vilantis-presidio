@@ -1,7 +1,7 @@
 # Vilantis' Presidio Fork
 
 ## What’s different from upstream
-- Added Lithuanian NER model (VytautoDidziojoUniversitetas/NUS-LT-PII-xlm-roberta-large)
+- Added Lithuanian NER model ([VytautoDidziojoUniversitetas/NUS-LT-PII-xlm-roberta-large](https://huggingface.co/VytautoDidziojoUniversitetas/NUS-LT-PII-xlm-roberta-large))
 - Custom analyzer configuration for `lt`
 
 ## Architecture
