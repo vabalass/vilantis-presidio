@@ -601,3 +601,15 @@ recognizers:
     supported_languages:
       - lt
     type: predefined
+
+  - name: TransformersRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: false
+
+  - name: SpacyRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: false
