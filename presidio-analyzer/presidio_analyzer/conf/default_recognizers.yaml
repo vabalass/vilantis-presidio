@@ -601,3 +601,4 @@ recognizers:
     supported_languages:
       - lt
     type: predefined
+    enabled: false

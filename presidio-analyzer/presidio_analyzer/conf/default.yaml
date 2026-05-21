@@ -1,8 +1,8 @@
 nlp_engine_name: spacy
 models:
   -
-    lang_code: en
-    model_name: en_core_web_lg
+    lang_code: lt
+    model_name: lt_core_news_lg
 
 ner_model_configuration:
   model_to_presidio_entity_mapping:
@@ -22,7 +22,7 @@ ner_model_configuration:
   low_score_entity_names:
   -
   labels_to_ignore:
-  - ORGANIZATION # Has many false positives
+#  - ORGANIZATION # Has many false positives
   - CARDINAL
   - EVENT
   - LANGUAGE
