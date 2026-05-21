@@ -28,6 +28,8 @@ COPY ./pyproject.toml /app/
 
 RUN pip install poetry==2.3.2 \
     && poetry install --no-root --only=main -E server \
+    && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \ 
+    && pip install --no-cache-dir transformers huggingface_hub \
     && rm -rf $(poetry config cache-dir)
     
 # install nlp models specified in NLP_CONF_FILE or via nlp_configuration in ANALYZER_CONF_FILE

@@ -601,3 +601,16 @@ recognizers:
     supported_languages:
       - lt
     type: predefined
+    enabled: false
+
+  - name: LtBertRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: true
+
+  - name: SpacyRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: false
