@@ -596,4 +596,15 @@ recognizers:
       - registracijos
       - įmonės kodas
       - imones kodas
-  
+
+  - name: TransformersRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: false
+
+  - name: SpacyRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: false
