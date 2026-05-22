@@ -1,0 +1,36 @@
+services:
+  presidio-anonymizer:
+    image: ${REGISTRY_NAME}${IMAGE_PREFIX}presidio-anonymizer${TAG}
+    build:
+      context: ./presidio-anonymizer
+    environment:
+      - PORT=5001
+    ports:
+      - "5001:5001"
+
+  presidio-analyzer-text:
+    image: ${REGISTRY_NAME}${IMAGE_PREFIX}presidio-analyzer-text${TAG}
+    build:
+      context: ./presidio-analyzer
+      args:
+        NLP_CONF_FILE: presidio_analyzer/conf/default.yaml
+        ANALYZER_CONF_FILE: presidio_analyzer/conf/default_analyzer.yaml
+        RECOGNIZER_REGISTRY_CONF_FILE: presidio_analyzer/conf/default_recognizers.yaml
+    environment:
+      - PORT=5001
+    ports:
+      - "5002:5001"
+
+  presidio-analyzer-transformers:
+    image: ${REGISTRY_NAME}${IMAGE_PREFIX}presidio-analyzer-transformers${TAG}
+    build:
+      context: ./presidio-analyzer
+      args:
+        NLP_CONF_FILE: presidio_analyzer/conf/transformers.yaml
+        ANALYZER_CONF_FILE: presidio_analyzer/conf/default_analyzer.yaml
+        RECOGNIZER_REGISTRY_CONF_FILE: presidio_analyzer/conf/transformers_recognizers.yaml
+      dockerfile: Dockerfile.transformers
+    environment:
+      - PORT=5001
+    ports:
+      - "5004:5001"

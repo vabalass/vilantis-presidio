@@ -44,5 +44,15 @@ ner_model_configuration:
     - OCC
     - NUM_CAR
     - DURATION
+    - NRP
+  
+  model_to_presidio_entity_mapping:
+    PER: PERSON
+    LOC: LOCATION
+    ORG: ORGANIZATION
+    ID_PER: ID
+    NUM_PHONE: PHONE_NUMBER
+    DATE: DATE_TIME
+    TIME: DATE_TIME
 
-  default_score: 0.85
+  default_score: 0.6
