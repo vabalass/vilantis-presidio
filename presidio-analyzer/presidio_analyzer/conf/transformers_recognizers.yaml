@@ -596,4 +596,9 @@ recognizers:
       - registracijos
       - įmonės kodas
       - imones kodas
-  
+    
+  - name: TransformersRecognizer
+    supported_languages:
+      - lt
+    type: predefined
+    enabled: true
